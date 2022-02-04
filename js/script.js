@@ -27,7 +27,7 @@ const renderError = function (errMessage) {
 const getCountryWeather = async function (country) {
   try {
     const request = await fetch(
-      `http://api.weatherapi.com/v1/current.json?key=d8fd97e8bf674cc3b7f142936220302%20&q=${country}&aqi=no`
+      `https://api.weatherapi.com/v1/current.json?key=d8fd97e8bf674cc3b7f142936220302%20&q=${country}&aqi=no`
     );
 
     const data = await request.json();
