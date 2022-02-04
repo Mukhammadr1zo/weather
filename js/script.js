@@ -5,12 +5,13 @@ let btnSrch = document.querySelector(".srch-btn");
 renderGetWeather = (data) => {
   const html = `
   <div class="card " style="width: 18rem">
-    <img class="mx-auto" src="${data.current.condition.icon}" alt="" width="200" />
+    <img src="${data.current.condition.icon}" alt="" width="150" />
     <div class="card-body">
         <h5 class="card-title">${data.location.country}</h5>
         <h5 class="card-title">${data.location.name} </h5>
-        <h2 class="card-text">${data.current.temp_c}<sup>°c</sup></h2>
-        <h5 class="card-title">Local Time: ${data.location.localtime}</h5>
+        <h2 class="card-text">${data.current.temp_c}<sup>°c</sup>  ${data.current.condition.text}</h2>
+        
+        <h5 class="card-title">Local Time:${data.location.localtime}</h5>
      </div>
   </div>
   
